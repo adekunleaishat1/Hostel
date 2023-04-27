@@ -3,6 +3,15 @@ let display = document.getElementById("display") ;
 let show_img =document.getElementById("showimg");
 let room = document.getElementById("roomcont");
 let explore = document.getElementById("explore");
+let email = document.getElementById("email");
+let nam = document.getElementById("name");
+let phone = document.getElementById("phone");
+let end_date = document.getElementById("end-date");
+let start_date = document.getElementById("start-date");
+let age = document.getElementById("age");
+let date = document.getElementById("date");
+let nationality = document.getElementById("nationality");
+let arrr =JSON.parse(localStorage.getItem("student"))
 document.getElementById("form").style.display= "none"
 let arr = JSON.parse(localStorage.getItem("product")); 
 room.style.display = "none"
@@ -53,6 +62,24 @@ room.style.display = "none"
  },
    
  ]
+  function submit(ev) {
+    ev.preventDefault();
+    room.style.display = "block"
+    let studentarr = {
+        name:nam.value,
+        email:email.value,
+        phonenumber:phone.value,
+        age:age.value,
+        nationality:nationality.value,
+        date:date.value,
+        startdate:start_date.value,
+        enddate:end_date.value,
+     }
+    arrr.push(studentarr);
+    localStorage.setItem("student",JSON.stringify(studentarr));
+    console.log(nam.value);
+    console.log(nationality.value);
+  }
   
 
 

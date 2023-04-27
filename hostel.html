@@ -142,42 +142,38 @@
       <form class="form_cont">
         <h2>Student Hostel Form</h2>
         
-        <div>
+        <div class="inp_cont">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required>
         </div>
-        <div>
+        <div class="inp_cont">
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required>
         </div>
-        <div>
+        <div class="inp_cont">
           <label for="phone">Phone:</label>
           <input type="tel" id="phone" name="phone" required>
         </div>     
-        <div>
+        <!-- <div class="inp_cont">
           <label for="emergency">Emergency Contact:</label>
           <input type="text" id="emergency" name="emergency" required>
-        </div>
-        <div>
+        </div> -->
+        <div class="inp_cont">
           <label for="room-type">Room Type:</label>
         <select id="room-type" name="room-type">
           <option value="single">Single Room</option>
           <option value="shared">Shared Room</option>
         </select>
         </div>
-        <div>
-          <label for="requirements">Specific Requirements:</label>
-          <textarea id="requirements" name="requirements"></textarea>
-        </div>
-        <div>
+        <div class="inp_cont">
           <label for="start-date">Start Date:</label>
           <input type="date" id="start-date" name="start-date" required>  
         </div>
-        <div>
+        <div class="inp_cont">
           <label for="end-date">End Date:</label>
           <input type="date" id="end-date" name="end-date" required>
         </div>
-        <div>
+        <div class="inp_cont">
           <label for="health-status">Health Status:</label>
           <select id="health-status" name="health-status">
            <option value="good">Good</option>
@@ -185,7 +181,7 @@
            <option value="poor">Poor</option>
          </select>
         </div>
-        <div>
+        <div class="inp_cont">
           <label for="gender">Gender:</label>
          <select id="gender" name="gender">
            <option value="male">Male</option>
@@ -193,25 +189,27 @@
            <option value="other">Other</option>
          </select>
         </div>
-        <div>
+        <div class="inp_cont">
           <label for="age">Age:</label>
           <input type="number" id="age" name="age" required>
         </div>
-        <div>
+        <div class="inp_cont">
           <label for="nationality">Nationality:</label>
           <input type="text" id="nationality" name="nationality" required>  
         </div>
-        <div>
+        <div class="inp">
+          <input type="checkbox" id="consent" name="consent" required>
           <label for="consent">
-            <input type="checkbox" id="consent" name="consent" required>
             I agree to the hostel's rules and regulations.
           </label>
         </div>             
-        <div>
+        <div class="inp_cont">
           <label for="date">Date:</label>
           <input type="date" id="date" name="date" required>
         </div>
-         <input type="submit">
+        <div class="inp_cont">
+          <button onclick="submit(event)" type="button">submit</button>
+        </div>
       
       </form> 
     </div>
