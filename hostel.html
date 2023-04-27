@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../fontawesome-free-6.2.1-web/css/all.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="hostel.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <main>
+    <div class="topnav">
+      <div class="imgnav">
+        <img src="1-removebg-preview.png" alt="">
+      </div>
+      <div class="butnav">
+        <button>Hostel</button>
+        <button>Lease a room</button>
+        <button>occupant</button>
+        <button onclick="agent(event)">Become a Host</button>
+        <button>Admin</button>
+      </div>
+    </div>
+    <div id="roomcont">
+      <div id="showimg">
+        <div class="img_container">
+          <div id="bg_img">
+            <div id="b_img">
+              <div class="b_img">
+                <h1 id="b_text"></h1>
+                <p id="b_tex"></p>
+                <button id="b_but"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dis_ame">
+          <div class="dis_am">
+            <div class="amenty_cont">
+              <h1 class="amenity">AMENITIES</h1>
+              <div class="amenty">
+                <button><i class="fa-solid fa-bed"></i>
+                  <p>Bed</p>
+                </button>
+                <button><i class="fa fa-solid fa-lightbulb"></i>
+                  <p>Generator</p>
+                </button>
+                <button><i class="fa fa fa-shield"></i>
+                  <p>Security</p>
+                </button>
+                <button><i class="fa fa-table"></i>
+                  <p>Fan</p>
+                </button>
+                <button><i class="fa fa-plug"></i>
+                  <p>Electricity</p>
+                </button>
+                <button><i class="fa fa-toilet"></i>
+                  <p>Toilet</p>
+                </button>
+              </div>
+            </div>
+            <aside></aside>
+            <div class="rules">
+              <h1>HOSTEL RULES</h1>
+              <div class="ho_rule">
+                <div class="hos_rule"><i class="fa-regular fa-circle-check"></i><span>Occupants must check-in and
+                    check-out of the hostel according to the designated times. Late check-outs may be subject to an
+                    additional fee.</span></div>
+                <div class="hos_rule"><i class="fa-regular fa-circle-check"></i><span>Only registered occupants are
+                    allowed to stay in the hostel. The maximum number of occupants per room is two.</span></div>
+                <div class="hos_rule"><i class="fa-regular fa-circle-check"></i><span>Smoking and alcohol are strictly
+                    prohibited within the hostel premises. Violators may be subject to immediate eviction.</span></div>
+                <div class="hos_rule"><i class="fa-regular fa-circle-check"></i><span>Guests are only allowed in
+                    designated areas of the hostel and must be registered at the front desk. The maximum number of
+                    guests per room is two.</span></div>
+                <div class="hos_rule"><i class="fa-regular fa-circle-check"></i><span>Occupants must store their
+                    valuables in the designated lockers or safe boxes. The hostel is not responsible for any lost or
+                    stolen items.</span></div>
+                <div class="hos_rule"><i class="fa-regular fa-circle-check"></i><span>Occupants are expected to keep
+                    their living spaces clean and tidy at all times. They are also required to participate in cleaning
+                    schedules for common areas.</span></div>
+                <div class="hos_rule"><i class="fa-regular fa-circle-check"></i><span>Occupants must comply with all
+                    local laws and regulations, including those related to noise, smoking, and alcohol.</span></div>
+                <div class="hos_rule"><i class="fa-regular fa-circle-check"></i><span>Violations of the hostel's rules
+                    and regulations may result in penalties, such as fines or eviction.</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="pay">
+            <div class="payed">
+              <div class="book_ro">
+                <div class="book_rom">
+                  <h1>HOSTEL VISITATION</h1>
+                </div>
+                <button>Book Now</button>
+              </div>
+              <div class="book_ro">
+                <div class="book_rom">
+                  <h1>RENT HOSTEL</h1>
+                </div>
+                <button onclick="clickme(event)">Rent Now</button>
+              </div>
+              <div class="book_ro">
+                <div class="book_rom">
+                  <h1>HOSTEL WISHLIST</h1>
+                </div>
+                <button>save hostels</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="imgcont">
+          <div class="gall">
+            <h1>GALLERY</h1>
+          </div>
+          <div class="grid-cont">
+          <div class="img">
+            <div class="img1">
+              <img id="img1" src="" alt="">
+            </div>
+            <div class="img1">
+              <img id="img2" src="" alt="">
+            </div>
+            <div class="img1">
+              <img id="img3" src="" alt="">
+            </div>
+            <div class="img1">
+              <img id="img4" src="" alt="">  
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="form">
+      <form class="form_cont">
+        <h2>Student Hostel Form</h2>
+        
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>     
+        <div>
+          <label for="emergency">Emergency Contact:</label>
+          <input type="text" id="emergency" name="emergency" required>
+        </div>
+        <div>
+          <label for="room-type">Room Type:</label>
+        <select id="room-type" name="room-type">
+          <option value="single">Single Room</option>
+          <option value="shared">Shared Room</option>
+        </select>
+        </div>
+        <div>
+          <label for="requirements">Specific Requirements:</label>
+          <textarea id="requirements" name="requirements"></textarea>
+        </div>
+        <div>
+          <label for="start-date">Start Date:</label>
+          <input type="date" id="start-date" name="start-date" required>  
+        </div>
+        <div>
+          <label for="end-date">End Date:</label>
+          <input type="date" id="end-date" name="end-date" required>
+        </div>
+        <div>
+          <label for="health-status">Health Status:</label>
+          <select id="health-status" name="health-status">
+           <option value="good">Good</option>
+           <option value="fair">Fair</option>
+           <option value="poor">Poor</option>
+         </select>
+        </div>
+        <div>
+          <label for="gender">Gender:</label>
+         <select id="gender" name="gender">
+           <option value="male">Male</option>
+           <option value="female">Female</option>
+           <option value="other">Other</option>
+         </select>
+        </div>
+        <div>
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" required>
+        </div>
+        <div>
+          <label for="nationality">Nationality:</label>
+          <input type="text" id="nationality" name="nationality" required>  
+        </div>
+        <div>
+          <label for="consent">
+            <input type="checkbox" id="consent" name="consent" required>
+            I agree to the hostel's rules and regulations.
+          </label>
+        </div>             
+        <div>
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+         <input type="submit">
+      
+      </form> 
+    </div>
+    <div id="content">
+      <div class="hos">
+        <div class="hos-cont">
+          <h1>We help you save money on hostels!</h1>
+          <p>Affordable hostel accommodation for your short stay needs.</p>
+          <div class="search2">
+            <div class="search">
+              <div class="search3">
+                <input type="text" placeholder="search for cities">
+                <i class="fa fa-circle-chevron-down"></i>
+              </div>
+              <div class="search3">
+                <input type="text" placeholder="price range">
+                <i class="fa fa-circle-chevron-down"></i>
+              </div>
+              <div class="search3">
+                <input type="text" placeholder="facilities">
+                <i class="fa fa-circle-chevron-down"></i>   
+              </div>
+              <button><i class="fa fa-magnifying-glass"></i></button>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="hos-center">
+                <div class="img-cont">
+                  <img src="Black_Pink_Bold_Elegant_Monogram_Personal_Brand_Logo-removebg-preview.png" alt="">
+                </div>
+                  <h1>Hostel Management</h1>
+                  <button id="list">list your property</button>
+              </div> -->
+      </div>
+    </div>
+    <div class="explore" id="explore">
+      <h1 class="exp">Explore our rooms with us</h1>
+      <p class="ex">Discover amazing rooms available for you.</p>
+    </div>
+    <div id="cont-display">
+      <div id="display"></div>
+    </div>
+    <footer>
+      <div class="">
+        <div class="container">
+          <div class="cont1">
+            <h1>Company</h1>
+            <button>Term</button>
+            <button>Privacy</button>
+          </div>
+          <div class="cont1">
+            <h1>Quick Links</h1>
+            <button>Lease a Room</button>
+            <button>Become a Host</button>
+          </div>
+          <div class="cont1">
+            <h1>Resources</h1>
+            <button>FAQs</button>
+            <button>Help Center</button>
+          </div>
+          <div class="cont1">
+            <h1>Contacts</h1>
+            <button>hello@mmw</button>
+            <button>+2348108145267</button>
+          </div>
+        </div>
+        <div class="cont">
+          <p>&copy; 2023 My Website. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- <div class="dashboard">
+            <div class="overview">
+              <h2>Overview</h2>
+              <p>Occupancy: 85%</p>
+              <p>Revenue: $10,000</p>
+              <p>Guest Satisfaction Score: 4.5/5</p>
+            </div>
+            <div class="reservations">
+              <h2>Reservations</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Room Number</th>
+                    <th>Check-in Date</th>
+                    <th>Check-out Date</th>
+                    <th>Guest Name</th>
+                    <th>Guest Email</th>
+                    <th>Guest Phone</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>101</td>
+                    <td>2023-05-01</td>
+                    <td>2023-05-05</td>
+                    <td>John Smith</td>
+                    <td>johnsmith@email.com</td>
+                    <td>555-555-1212</td>
+                  </tr>
+                  <tr>
+                    <td>102</td>
+                    <td>2023-05-03</td>
+                    <td>2023-05-05</td>
+                    <td>Jane Doe</td>
+                    <td>janedoe@email.com</td>
+                    <td>555-555-1213</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="rooms">
+              <h2>Rooms</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Room Number</th>
+                    <th>Room Type</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>101</td>
+                    <td>Private</td>
+                    <td>Clean</td>
+                  </tr>
+                  <tr>
+                    <td>102</td>
+                    <td>Dormitory</td>
+                    <td>Dirty</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="staff">
+              <h2>Staff</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>John Doe</td>
+                    <td>Manager</td>
+                    <td>johndoe@email.com</td>
+                    <td>555-555-1212</td>
+                  </tr>
+                  <tr>
+                    <td>Jane Smith</td>
+                    <td>Front Desk Clerk</td>
+                    <td>janesmith@email.com</td>
+                    <td>555-555-1213</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div> -->
+
+  </main>
+</body>
+
+</html>
+<script src="hostel.js"></script>
