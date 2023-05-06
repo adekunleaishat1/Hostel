@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontawesome-free-6.2.1-web/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="agent.css">
+    <title>Document</title>
+</head>
+<body>
+   <main>
+        <div class="topnav">
+            <div class="imgnav">
+              <img src="1-removebg-preview.png" alt="">
+            </div>
+            <div class="butnav">
+              <button onclick="home(event)">Home</button>
+              <button>Profile</button>
+              <button>occupant</button>
+              <button onclick="agent(event)">Contact Us</button>
+              <button>Admin</button>
+            </div>
+       </div>
+       <div class="content">
+         <div class="img-content">
+            <img src="lovepik-real-estate-agent-sales-png-image_401510128_wh1200-transformed-removebg-preview.png" alt="">
+         </div>
+         <div class="text-cont">
+            <div class="text-con">
+              <h1>Welcome to the exciting world of hosting! <b> Whether you're interested in hosting guests in your home or renting out your property,</b> 
+                I'm here to help guide you through the process and ensure your success as a host.</h1>
+                <!-- <h1>Welcome to XYZ Hostel! <b> Our hostel is located in the heart of the city</b>
+                and offers comfortable and affordable accommodations for students.</h1>
+                <p>Discover the perfect student accommodation at XYZ Hostel. </p> -->
+              <p></p>    
+            </div>
+         </div>
+       </div>
+       <div id="post">
+         <h1>POST PROPERTY</h1>
+         <div>
+           <form class="di">
+            <!-- <label for="property-type">Property Type:</label>
+            <select id="property-type" name="property-type">
+              <option value="single-family-home">Single Family Home</option>
+              <option value="condo">Condo</option>
+              <option value="apartment">Apartment</option>
+            </select> -->
+            <label for="title">Title:</label>
+            <input type="text" id="title"  name="title">
+
+            <label for="property-address">Property Address:</label>
+            <input type="text" id="propertyaddress" name="property-address">
+          
+            <label for="property-description">Property Description:</label>
+            <textarea id="propertydescription" name="property-description"></textarea>
+          
+            <label for="rental-price">Rental Price:</label>
+            <input type="number" id="rentalprice" name="rental-price">
+          
+            <label for="property-photos">Photos:</label>
+            <input onchange="choosephoto()" type="file" id="propertyphotos" name="property-photos" accept="image/*" multiple>
+            
+            <div class="dii">
+              <label for="property-photos">images:</label>
+              <input onchange="chooseimage()" type="file" id="propertyimage" name="property-images" accept="image/*" multiple>
+           </div>
+          
+          
+            <button onclick="post(event)" class="submit" >submit</button>
+          </form>
+          
+        </div>
+       </div>
+      <footer>
+        <div class="">
+          <div class="container">
+            <div class="cont1">
+              <h1>Company</h1>
+              <button>Term</button>
+              <button>Privacy</button>
+            </div>
+            <div class="cont1">
+              <h1>Quick Links</h1>
+              <button>Lease a Room</button>
+              <button>Become a Host</button>
+            </div>
+            <div class="cont1">
+              <h1>Resources</h1>
+              <button>FAQs</button>
+              <button>Help Center</button>
+            </div>
+            <div class="cont1">
+              <h1>Contacts</h1>
+              <button>hello@mmw</button>
+              <button>+2348108145267</button>
+            </div>
+          </div>
+          <div class="cont">
+            <p>&copy; 2023 My Website. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+</body>
+</html>
+<script src="agent.js"></script>

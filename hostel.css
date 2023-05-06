@@ -281,6 +281,7 @@
   }
   .grid-cont{
     width: 100%;
+    max-width: 100%;
     height: 700px;
     display: flex;
     flex-wrap: wrap;
@@ -293,7 +294,8 @@
     text-align: center;
   }
   .img1{
-    width: 500px;
+    width: 100%;
+    max-width: 100%;
     height: 280px;
     border-radius: 10px;
     /* border: 1px solid red; */
@@ -342,7 +344,7 @@
      color: gray;
   }
   .rules{
-    width: 50%;
+    width: 40%;
     height: 700px;
     justify-content: center;
   }
@@ -352,7 +354,8 @@
     margin-left: 40px;
   }
   .ho_rule{
-    width: 700px;
+    width:700px;
+    max-width: 100%;
     height: 600px;
     margin-left: 20px;
   }
@@ -366,8 +369,9 @@
     padding-left: 20px;
   }
   .hos_rule{
-    width: 700px;
+    width: 600px;
     height: 50px;
+
     background-color: transparent;
     display: flex;
     border: none;
@@ -407,6 +411,8 @@
     width: 100%;
     height: 250px;
     margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
     background-color:rgb(110, 195, 216);
     box-shadow: 0px 0px 5px rgb(255, 255, 255);
     text-align: center;
@@ -416,7 +422,8 @@
     font-weight: 700;
   }
   .book_ro button{
-    width: 300px;
+    width: 100%;
+    max-width:100%;
     height: 50px;
     background-color: #0A2B31;
     border: 1px solid #0A2B31;
@@ -432,12 +439,9 @@
     background-color: rgb(110, 195, 216);
   }
   #form{
-    width: 75%;
+    width: 100%;
     height: 100vh;
     background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0 auto;
     box-shadow: 0px 0px 7px gray;
     position: fixed;
@@ -448,13 +452,14 @@
     z-index: 1;
   }
   .form_cont{
-    width: 75%;
-    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
     height: 100vh;
     overflow-y: scroll;
-    margin: 0 auto;
-    text-align: center;
-    background-color: #f5f5f5;
   }
   .form_cont::-webkit-scrollbar{
     display: none;
@@ -464,28 +469,51 @@
     font-size: 30px;
     margin-top: 20px;
   }
-  .form_cont input {
-    width: 600px;
-    /* height: 40px; */
-    border: none;
-    border-radius: 20px;
-    padding: 10px;
-    max-width: 100%;
-    color: #333;
-    background-color: #fff;
-    box-shadow:0px 0px 10px #f5f5f5;
+  label {
+    margin-bottom: 0.5rem;
   }
-  select{
-    width: 600px;
-    /* height: 40px; */
-    border: none;
-    border-radius: 20px;
-    padding: 10px;
-    max-width: 100%;
-    color: #333;
-    background-color: #fff;
+  .di input,
+  .di select,
+  .di textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    width: 100%;
   }
-  .form_cont input::content{
+  
+  .submit {
+    width: 100%;
+    background-color: #4CAF50;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    padding: 0.8rem;
+  }
+  
+  .submit:hover {
+    background-color: #3e8e41;
+  }
+  
+  input[type="file"] {
+    margin-bottom: 0;
+    padding: 0;
+    width: auto;
+  }
+  .di{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  /* .form_cont input::content{
       padding-inline: 10px;
   }
   .form_cont input:invalid{
@@ -496,26 +524,11 @@
   }
   .form_cont label{
      font-size: 20px;
-     text-align: start;
-  }
-  .inp_cont{
-    width: 800px;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  input[type="checkbox"]{
-    margin-right: 10px;
-  }
-  .inp{
-    width: 600px;
-    height: 80px;
-    display: inline;
-
-  }
+     margin-bottom: 0.5rem;
+  } */
   .search2{
     width: 100%;
+    max-width: 100%;
     height: 300px;
     display: flex;
     justify-content: center;
@@ -523,6 +536,7 @@
   }
   .search3{
     width: 300px;
+    max-width: 100%;
     height: 50px;
     display: flex;
     justify-content:center;
@@ -539,6 +553,7 @@
   .search{
     width: 1200px;
     height: 100px;
+    max-width: 100%;
     background-color: aliceblue;
     display: flex;
     justify-content: space-around;
@@ -557,7 +572,7 @@
     color: rgba(255, 255, 255, 0.829);
   }
   .search input{
-      width: 300px;
+      width: 100%;
       height: 50px;
       border: none;
       outline: none;
@@ -572,6 +587,28 @@
     font-size: 18px;
     font-weight: 500;
   }
+  .room_cont{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .room{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .room h1{
+    font-size: 30px;
+    color: black;
+    font-weight: 700;
+  }
+ 
+
+  
   
   footer {
     display: flex;

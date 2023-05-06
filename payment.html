@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontawesome-free-6.2.1-web/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="payment.css">
+    <title>Document</title>
+</head>
+<body>
+   <main>
+    <div class="topnav">
+      <div class="imgnav">
+        <img src="1-removebg-preview.png" alt="">
+      </div>
+      <div class="butnav">
+        <button>Hostel</button>
+        <button>Lease a room</button>
+        <button>occupant</button>
+        <button onclick="agent(event)">Become a Host</button>
+        <button>Admin</button>
+      </div>
+    </div>
+     <div class="container1">
+        <div class="img_container">
+          <div class="img-cont">
+            <div class="img-payment">
+              <img src="desktop-wallpaper-electronic-payments-look-more-appealing-as-coronavirus-spreads.jpg" alt="">   
+            </div>
+          </div>  
+         <!-- <form action="" id="paymentForm"> -->
+          <div class="text-cont">
+            <div class="payment" id="paymentForm">
+              <div class="mak-pay">
+                <h1>Make Payment</h1>
+              </div>
+              <div class="pay">
+                <div class="pay_cont">
+                  <button>Payment For</button>
+                </div>
+                <div class="pay_cont">
+                  <h1 id="nam" >200,000</h1>
+                </div>
+              </div>
+              <div class="pay">
+                <div class="pay_cont">
+                  <button>Hostel price</button>
+                </div>
+                <div class="pay_cont">
+                  <h1 id="price"></h1>
+                </div>
+              </div>
+              <div id="pay">
+                <button onclick="payWithPaystack(event)">pay</button>
+              </div>
+            </div>
+          </div>
+         <!-- </form> -->
+        </div>
+     </div>
+     <footer>
+      <div class="">
+        <div class="container">
+          <div class="cont1">
+            <h1>Company</h1>
+            <button>Term</button>
+            <button>Privacy</button>
+          </div>
+          <div class="cont1">
+            <h1>Quick Links</h1>
+            <button>Lease a Room</button>
+            <button>Become a Host</button>
+          </div>
+          <div class="cont1">
+            <h1>Resources</h1>
+            <button>FAQs</button>
+            <button>Help Center</button>
+          </div>
+          <div class="cont1">
+            <h1>Contacts</h1>
+            <button>hello@mmw</button>
+            <button>+2348108145267</button>
+          </div>
+        </div>
+        <div class="cont">
+          <p>&copy; 2023 My Website. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+   </main> 
+</body>
+</html>
+<script src="payment.js"></script>
+<script src="https://js.paystack.co/v1/inline.js"></script> 

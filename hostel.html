@@ -104,7 +104,7 @@
                 <div class="book_rom">
                   <h1>RENT HOSTEL</h1>
                 </div>
-                <button onclick="clickme(event)">Rent Now</button>
+                <button onclick="clickme(0)">Rent Now</button>
               </div>
               <div class="book_ro">
                 <div class="book_rom">
@@ -120,168 +120,140 @@
             <h1>GALLERY</h1>
           </div>
           <div class="grid-cont">
-          <div class="img">
-            <div class="img1">
-              <img id="img1" src="" alt="">
+            <div class="img">
+              <div class="img1">
+                <img id="img1" src="" alt="">
+              </div>
+              <div class="img1">
+                <img id="img2" src="" alt="">
+              </div>
+              <div class="img1">
+                <img id="img3" src="" alt="">
+              </div>
+              <div class="img1">
+                <img id="img4" src="" alt="">
+              </div>
             </div>
-            <div class="img1">
-              <img id="img2" src="" alt="">
-            </div>
-            <div class="img1">
-              <img id="img3" src="" alt="">
-            </div>
-            <div class="img1">
-              <img id="img4" src="" alt="">  
-            </div>
-          </div>
           </div>
         </div>
+        <div>
+          <div class="room">
+            <h1>ROOM NO:</h1>
+          </div>
+          <div class="room_cont">
+            <div id="room-buttons-container">
+              
+            </div>
+          </div>
+       </div>
       </div>
     </div>
     <div id="form">
-      <form class="form_cont">
+      <div class="form_cont">
         <h2>Student Hostel Form</h2>
-        
-        <div class="inp_cont">
+        <div class="di">
+
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required>
-        </div>
-        <div class="inp_cont">
+
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required>
-        </div>
-        <div class="inp_cont">
+
+
           <label for="phone">Phone:</label>
           <input type="tel" id="phone" name="phone" required>
-        </div>     
-        <!-- <div class="inp_cont">
-          <label for="emergency">Emergency Contact:</label>
-          <input type="text" id="emergency" name="emergency" required>
-        </div> -->
-        <div class="inp_cont">
-          <label for="room-type">Room Type:</label>
-        <select id="room-type" name="room-type">
-          <option value="single">Single Room</option>
-          <option value="shared">Shared Room</option>
-        </select>
-        </div>
-        <div class="inp_cont">
+
           <label for="start-date">Start Date:</label>
-          <input type="date" id="start-date" name="start-date" required>  
-        </div>
-        <div class="inp_cont">
+          <input type="date" id="start-date" name="start-date" required>
+
           <label for="end-date">End Date:</label>
           <input type="date" id="end-date" name="end-date" required>
-        </div>
-        <div class="inp_cont">
-          <label for="health-status">Health Status:</label>
-          <select id="health-status" name="health-status">
-           <option value="good">Good</option>
-           <option value="fair">Fair</option>
-           <option value="poor">Poor</option>
-         </select>
-        </div>
-        <div class="inp_cont">
+
           <label for="gender">Gender:</label>
-         <select id="gender" name="gender">
-           <option value="male">Male</option>
-           <option value="female">Female</option>
-           <option value="other">Other</option>
-         </select>
-        </div>
-        <div class="inp_cont">
+          <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+
           <label for="age">Age:</label>
           <input type="number" id="age" name="age" required>
-        </div>
-        <div class="inp_cont">
+
           <label for="nationality">Nationality:</label>
-          <input type="text" id="nationality" name="nationality" required>  
-        </div>
-        <div class="inp">
-          <input type="checkbox" id="consent" name="consent" required>
-          <label for="consent">
-            I agree to the hostel's rules and regulations.
-          </label>
-        </div>             
-        <div class="inp_cont">
+          <input type="text" id="nationality" name="nationality" required>
+
           <label for="date">Date:</label>
-          <input type="date" id="date" name="date" required>
+          <input type="date" id="datee" name="date" required>
+
+            <button class="submit" onclick="submit(0)" type="button">submit</button>
         </div>
-        <div class="inp_cont">
-          <button onclick="submit(event)" type="button">submit</button>
-        </div>
-      
-      </form> 
+      </div>
     </div>
-    <div id="content">
-      <div class="hos">
-        <div class="hos-cont">
-          <h1>We help you save money on hostels!</h1>
-          <p>Affordable hostel accommodation for your short stay needs.</p>
-          <div class="search2">
-            <div class="search">
-              <div class="search3">
-                <input type="text" placeholder="search for cities">
-                <i class="fa fa-circle-chevron-down"></i>
+    <div id="payment_cont">
+    
+    </div>
+      <div id="content">
+        <div class="hos">
+          <div class="hos-cont">
+            <h1>We help you save money on hostels!</h1>
+            <p>Affordable hostel accommodation for your short stay needs.</p>
+            <div class="search2">
+              <div class="search">
+                <div class="search3">
+                  <input type="text" placeholder="search for cities">
+                  <i class="fa fa-circle-chevron-down"></i>
+                </div>
+                <div class="search3">
+                  <input type="text" placeholder="price range">
+                  <i class="fa fa-circle-chevron-down"></i>
+                </div>
+                <div class="search3">
+                  <input type="text" placeholder="facilities">
+                  <i class="fa fa-circle-chevron-down"></i>
+                </div>
+                <button><i class="fa fa-magnifying-glass"></i></button>
               </div>
-              <div class="search3">
-                <input type="text" placeholder="price range">
-                <i class="fa fa-circle-chevron-down"></i>
-              </div>
-              <div class="search3">
-                <input type="text" placeholder="facilities">
-                <i class="fa fa-circle-chevron-down"></i>   
-              </div>
-              <button><i class="fa fa-magnifying-glass"></i></button>
             </div>
           </div>
         </div>
-        <!-- <div class="hos-center">
-                <div class="img-cont">
-                  <img src="Black_Pink_Bold_Elegant_Monogram_Personal_Brand_Logo-removebg-preview.png" alt="">
-                </div>
-                  <h1>Hostel Management</h1>
-                  <button id="list">list your property</button>
-              </div> -->
       </div>
-    </div>
-    <div class="explore" id="explore">
-      <h1 class="exp">Explore our rooms with us</h1>
-      <p class="ex">Discover amazing rooms available for you.</p>
-    </div>
-    <div id="cont-display">
-      <div id="display"></div>
-    </div>
-    <footer>
-      <div class="">
-        <div class="container">
-          <div class="cont1">
-            <h1>Company</h1>
-            <button>Term</button>
-            <button>Privacy</button>
+      <div class="explore" id="explore">
+        <h1 class="exp">Explore our rooms with us</h1>
+        <p class="ex">Discover amazing rooms available for you.</p>
+      </div>
+      <div id="cont-display">
+        <div id="display"></div>
+      </div>
+      <footer>
+        <div class="">
+          <div class="container">
+            <div class="cont1">
+              <h1>Company</h1>
+              <button>Term</button>
+              <button>Privacy</button>
+            </div>
+            <div class="cont1">
+              <h1>Quick Links</h1>
+              <button>Lease a Room</button>
+              <button>Become a Host</button>
+            </div>
+            <div class="cont1">
+              <h1>Resources</h1>
+              <button>FAQs</button>
+              <button>Help Center</button>
+            </div>
+            <div class="cont1">
+              <h1>Contacts</h1>
+              <button>hello@mmw</button>
+              <button>+2348108145267</button>
+            </div>
           </div>
-          <div class="cont1">
-            <h1>Quick Links</h1>
-            <button>Lease a Room</button>
-            <button>Become a Host</button>
-          </div>
-          <div class="cont1">
-            <h1>Resources</h1>
-            <button>FAQs</button>
-            <button>Help Center</button>
-          </div>
-          <div class="cont1">
-            <h1>Contacts</h1>
-            <button>hello@mmw</button>
-            <button>+2348108145267</button>
+          <div class="cont">
+            <p>&copy; 2023 My Website. All rights reserved.</p>
           </div>
         </div>
-        <div class="cont">
-          <p>&copy; 2023 My Website. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
-    <!-- <div class="dashboard">
+      </footer>
+      <!-- <div class="dashboard">
             <div class="overview">
               <h2>Overview</h2>
               <p>Occupancy: 85%</p>

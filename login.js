@@ -7,7 +7,7 @@ function log(ev) {
        if(getuser){
           alert("login successfully")
           localStorage.setItem("currentuser", JSON.stringify(getuser))
-          window.location.href ="hostel.html"
+          window.location.href ="student.html"
        }else{
          alert("user not found")
          return;

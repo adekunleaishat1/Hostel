@@ -24,6 +24,20 @@
     /* width: 200px; */
     /* height: 150px; */
 }
+#sign{
+    width: 120px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid rgb(171, 121, 50);
+    border-radius: 10px;
+    font-size: 19px;
+    font-weight: 500;
+    color: black;
+}
+#sign:hover{
+   transform:scale(1.2);
+   transition: 2s ease-in-out;
+}
 .but{
     width: 700px;
     height: 80px;
