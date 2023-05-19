@@ -24,15 +24,38 @@
              <button id="sca">Admin</button>
              <button id="sign" onclick="sign()">signup</button>
            </div>
-           <div>
-             
+           <div class="bar2">
+             <button onclick="drop()" class="bar">
+              <i class="fa-solid fa-bars"></i>
+             </button>
            </div>
+        </div>
+        <div id="dropdown">
+          <div class="drop1">
+              <button onclick="back()" class="icon">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <div class="drop">
+                    <button>Home</button>
+                    <button>Lease a room</button>
+                    <button>occupant</button>
+                    <button>Become a Host</button>
+                    <button onclick="sign()">signup</button>
+              </div>
+              <div class="imgna">
+                 <img src="Black_Pink_Bold_Elegant_Monogram_Personal_Brand_Logo-removebg-preview.png" alt="">
+              </div>
+          </div>
         </div>
         <div class="content">
            <div class="hos">
               <div class="hos-cont">
-                <h1>We help you save money on hostels!</h1>
-                <p>Affordable hostel accommodation for your short stay needs.</p>
+                <div class="text-con">
+                  <div>
+                  <h1>We help you save money on hostels!</h1>
+                  <p>Affordable hostel accommodation for your short stay needs.</p>
+                  </div>
+                </div>
                 <div class="search2">
                   <div class="search">
                     <div class="search3">
@@ -66,6 +89,7 @@
              </div>
           </div>
         </div>
+        <div class="contain3">
         <div class="mm">
           <h1>How it works</h1>
           <p>Three amazing easy steps to renting a good hostel</p>
@@ -104,6 +128,7 @@
             </div>
           </div>
         </div>
+       </div> 
         <!-- <div class="hos1">
             <div class="se-im">
                 <img src="hostel_belgium_ghent_de-draecke_008005_twin.jpg" alt="">
@@ -141,7 +166,7 @@
               <div class="">
                 <h1>Show case your Hostel to the wider audience</h1>
                 <p>You are just one step away from your wealth creation journey. </p>
-                <button>Become a Host</button>
+                <button onclick="agsign()">Become a Host</button>
               </div>
             </div>
         </div>
@@ -226,6 +251,8 @@
 <script>
     let display = document.getElementById("display");
      let view = document.getElementById("view");
+     document.getElementById("dropdown").style.display = "none"
+
      
     
     let hostel = [
@@ -292,5 +319,15 @@
 
     function sign() {
         window.location.href = "signup.html"
+    }
+    function agsign() {
+      window.location.href = "signup2.html"
+    }
+     function back() {
+      document.getElementById("dropdown").style.display = "none"
+    }
+      function drop() {
+      document.getElementById("dropdown").style.display = "block" 
+     document.getElementById("dropdown").style.transition = "2s" 
     }
 </script>

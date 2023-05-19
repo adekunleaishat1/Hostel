@@ -31,29 +31,34 @@
        <div class="container1">
           <div class="container2">
             <div class="profile_cont">
-                <h1>Profile</h1>
+                <div class="prof">
+                  <h1>Profile</h1>
+                </div>
                 <div class="upload-container">
+                  <div class="upload">
                     <div>
                       <div class="imgupload">
-                        <i id="user" class="fa-regular fa-user"></i>
                         <img id="img" src="" alt="">
-                      </div>
-                      <input onchange="chooseprofile()" type="file" id="file-input" name="file-input">
+                        <input onchange="chooseprofile()" type="file" id="file-input" name="file-input">
                         <button onclick="upload()" type="submit" id="upload-button"><i class="fa-solid fa-camera"></i></button>
-                      <div id="image-preview"></div>
-                   </div>                      
+                      </div>
+                   </div>  
+                  </div>                     
                 </div>  
             </div>
             <div class="name">
               <div>
-                <div id="nam" class="name_cont">
-                  <p>Name</p>
+                <div class="name_cont">
+                  <h1>Name</h1>
+                  <p id="nam"></p>
                </div>
-               <div id="emal" class="name_cont">
-                  <p>Email</p>
+               <div class="name_cont">
+                  <h1>Email</h1>
+                  <p id="emal"></p>
                 </div>
-                <div id="phone" class="name_cont">
-                   <p>Phonenumber</p>
+                <div  class="name_cont">
+                   <h1></h1>
+                   <p id="phone"></p>
                 </div>
               </div>
             </div>  

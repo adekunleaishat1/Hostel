@@ -7,7 +7,7 @@ let getagent = JSON.parse(localStorage.getItem("currentagent"))
     getagent= arr.find((curr)=>curr.email == mail.value && curr.password == pass.value)
      if(getagent){
       localStorage.setItem("currentagent",JSON.stringify(getagent))
-      window.location.href =""
+      window.location.href ="agent.html"
       console.log(getagent);
      alert("login successfully")
      }else{

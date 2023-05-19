@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontawesome-free-6.2.1-web/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="topnav">
+            <div class="imgnav">
+              <img src="1-removebg-preview.png" alt="">
+            </div>
+            <div class="butnav">
+              <button>Home</button>
+              <button>Lease a room</button>
+              <button>occupant</button>
+              <button onclick="agent(event)">Become a Host</button>
+              <button>Admin</button>
+            </div>
+            <div class="bar2">
+              <button onclick="drop()" class="bar">
+               <i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
+        </div>  
+        <div id="dropdown">
+          <div class="drop1">
+              <button onclick="back()" class="icon">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <div class="drop">
+                    <button onclick="home(event)">Home</button>
+                    <button>Lease a room</button>
+                    <button>occupant</button>
+                    <button onclick="agent(event)">Become a Host</button>
+                    <button>Admin</button>
+              </div>
+              <div class="imgna">
+                 <img src="Black_Pink_Bold_Elegant_Monogram_Personal_Brand_Logo-removebg-preview.png" alt="">
+              </div>
+          </div>
+        </div>
+        <div>
+            
+        </div>
+        <footer>
+            <div class="">
+              <div class="container">
+                <div class="cont1">
+                  <h1>Company</h1>
+                  <button>Term</button>
+                  <button>Privacy</button>
+                </div>
+                <div class="cont1">
+                  <h1>Quick Links</h1>
+                  <button>Lease a Room</button>
+                  <button>Become a Host</button>
+                </div>
+                <div class="cont1">
+                  <h1>Resources</h1>
+                  <button>FAQs</button>
+                  <button>Help Center</button>
+                </div>
+                <div class="cont1">
+                  <h1>Contacts</h1>
+                  <button>hello@mmw</button>
+                  <button>+2348108145267</button>
+                </div>
+              </div>
+              <div class="cont">
+                <p>&copy; 2023 My Website. All rights reserved.</p>
+              </div>
+            </div>
+          </footer>   
+    </main>
+</body>
+</html>
+<script src="admin.js"></script>

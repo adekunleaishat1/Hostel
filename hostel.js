@@ -12,76 +12,79 @@ let age = document.getElementById("age");
 let date = document.getElementById("datee");
 let nationality = document.getElementById("nationality");
 let gender = document.getElementById("gender");
-let hostels = JSON.parse(localStorage.getItem("hotel_room"))
+let hostel = JSON.parse(localStorage.getItem("hostel_room"))
+console.log(hostel);
 let studentarr = JSON.parse(localStorage.getItem("student"))
 let prodctarr = JSON.parse(localStorage.getItem("rooms"))
 const roomBtn = document.createElement("button");
 document.getElementById("payment_cont").style.display = "none"
 document.getElementById("form").style.display = "none"
 room.style.display = "none"
+document.getElementById("dropdown").style.display = "none"
+
 let index = 0
 prodctarr = []
-let hostel = [
-  {
-    title: "Johnrok Hostel",
-    thumsnail: "2017-11-05.jpg",
-    image: ["2017-11-05.jpg", "IMG_20221002_150411-scaled.jpg", "IMG_20221002_150415-scaled.jpg", "IMG_20221002_150422-scaled.jpg", "IMG_20221019_160958-scaled.jpg"],
-    description: "A selfcon apartment that can be occupy by two student with a kitchen and toilet fully furnished. ",
-    location: "Tanke junction opposite whiteny hotel ,Ilorin.",
-    price: 170000,
-    no_of_rooms: 80,
-    room_number: ""
-  },
-  {
-    title: "Delight Hostel",
-    thumsnail: "2018-08-18.jpg",
-    image: ["2018-08-18.jpg", "2019-09-21.jpg", "Hostel - 2.jpeg", "gallery9.jpeg", "nucleusimagery.blob.core.windows.jpg"],
-    description: "A selfcon apartment that can be occupy by two student with a kitchen and toilet fully furnished.",
-    location: "Ibadan alade street, Bodija.",
-    price: 150000,
-    no_of_rooms: 50,
-    room_number: ""
-  }, {
-    title: "JMK Hostel",
-    thumsnail: "IMG-20210711-WA0029.6a24b456.jpg",
-    image: ["IMG-20210711-WA0029.6a24b456.jpg", "PREMIUM-EXECUTIVE-SINGLE-ROOM-A-1.jpeg", "ch-07.jpg", "ROOM-OF-3-B-1.jpeg", "filepict-1537522204.jpg"],
-    description: "a miniflat apartment for student ,fully furnished room with modern equiptment ",
-    location: "Abuja,along akure road Garki.",
-    price: 250000,
-    no_of_rooms: 100,
-    room_number: ""
-  }, {
-    title: "JMK Hostel",
-    thumsnail: "IMG-20210711-WA0029.6a24b456.jpg",
-    image: ["IMG-20210711-WA0029.6a24b456.jpg", "PREMIUM-EXECUTIVE-SINGLE-ROOM-A-1.jpeg", "ch-07.jpg", "ROOM-OF-3-B-1.jpeg", "filepict-1537522204.jpg"],
-    description: "a miniflat apartment for student ,fully furnished room with modern equiptment ",
-    location: "Abuja,along akure road Garki.",
-    price: 250000,
-    no_of_rooms: 100,
-    room_number: ""
-  }, {
-    title: "JMK Hostel",
-    thumsnail: "IMG-20210711-WA0029.6a24b456.jpg",
-    image: ["IMG-20210711-WA0029.6a24b456.jpg", "PREMIUM-EXECUTIVE-SINGLE-ROOM-A-1.jpeg", "ch-07.jpg", "ROOM-OF-3-B-1.jpeg", "filepict-1537522204.jpg"],
-    description: "a miniflat apartment for student ,fully furnished room with modern equiptment ",
-    location: "Abuja,along akure road Garki.",
-    price: 250000,
-    no_of_rooms: 100,
-    room_number: ""
-  }, {
-    title: "JMK Hostel",
-    thumsnail: "IMG-20210711-WA0029.6a24b456.jpg",
-    image: ["IMG-20210711-WA0029.6a24b456.jpg", "PREMIUM-EXECUTIVE-SINGLE-ROOM-A-1.jpeg", "ch-07.jpg", "ROOM-OF-3-B-1.jpeg", "filepict-1537522204.jpg"],
-    description: "a miniflat apartment for student ,fully furnished room with modern equiptment ",
-    location: "Abuja,along akure road Garki.",
-    price: 250000,
-    no_of_rooms: 100,
-    room_number: " "
-  },
+// let hostel = [
+//   {
+//     title: "Johnrok Hostel",
+//     thumsnail: "2017-11-05.jpg",
+//     image: ["2017-11-05.jpg", "IMG_20221002_150411-scaled.jpg", "IMG_20221002_150415-scaled.jpg", "IMG_20221002_150422-scaled.jpg", "IMG_20221019_160958-scaled.jpg"],
+//     description: "A selfcon apartment that can be occupy by two student with a kitchen and toilet fully furnished. ",
+//     location: "Tanke junction opposite whiteny hotel ,Ilorin.",
+//     price: 170000,
+//     no_of_rooms: 80,
+//     room_number: ""
+//   },
+//   {
+//     title: "Delight Hostel",
+//     thumsnail: "2018-08-18.jpg",
+//     image: ["2018-08-18.jpg", "2019-09-21.jpg", "Hostel - 2.jpeg", "gallery9.jpeg", "nucleusimagery.blob.core.windows.jpg"],
+//     description: "A selfcon apartment that can be occupy by two student with a kitchen and toilet fully furnished.",
+//     location: "Ibadan alade street, Bodija.",
+//     price: 150000,
+//     no_of_rooms: 50,
+//     room_number: ""
+//   }, {
+//     title: "JMK Hostel",
+//     thumsnail: "IMG-20210711-WA0029.6a24b456.jpg",
+//     image: ["IMG-20210711-WA0029.6a24b456.jpg", "PREMIUM-EXECUTIVE-SINGLE-ROOM-A-1.jpeg", "ch-07.jpg", "ROOM-OF-3-B-1.jpeg", "filepict-1537522204.jpg"],
+//     description: "a miniflat apartment for student ,fully furnished room with modern equiptment ",
+//     location: "Abuja,along akure road Garki.",
+//     price: 250000,
+//     no_of_rooms: 100,
+//     room_number: ""
+//   }, {
+//     title: "JMK Hostel",
+//     thumsnail: "IMG-20210711-WA0029.6a24b456.jpg",
+//     image: ["IMG-20210711-WA0029.6a24b456.jpg", "PREMIUM-EXECUTIVE-SINGLE-ROOM-A-1.jpeg", "ch-07.jpg", "ROOM-OF-3-B-1.jpeg", "filepict-1537522204.jpg"],
+//     description: "a miniflat apartment for student ,fully furnished room with modern equiptment ",
+//     location: "Abuja,along akure road Garki.",
+//     price: 250000,
+//     no_of_rooms: 100,
+//     room_number: ""
+//   }, {
+//     title: "JMK Hostel",
+//     thumsnail: "IMG-20210711-WA0029.6a24b456.jpg",
+//     image: ["IMG-20210711-WA0029.6a24b456.jpg", "PREMIUM-EXECUTIVE-SINGLE-ROOM-A-1.jpeg", "ch-07.jpg", "ROOM-OF-3-B-1.jpeg", "filepict-1537522204.jpg"],
+//     description: "a miniflat apartment for student ,fully furnished room with modern equiptment ",
+//     location: "Abuja,along akure road Garki.",
+//     price: 250000,
+//     no_of_rooms: 100,
+//     room_number: ""
+//   }, {
+//     title: "JMK Hostel",
+//     thumsnail: "IMG-20210711-WA0029.6a24b456.jpg",
+//     image: ["IMG-20210711-WA0029.6a24b456.jpg", "PREMIUM-EXECUTIVE-SINGLE-ROOM-A-1.jpeg", "ch-07.jpg", "ROOM-OF-3-B-1.jpeg", "filepict-1537522204.jpg"],
+//     description: "a miniflat apartment for student ,fully furnished room with modern equiptment ",
+//     location: "Abuja,along akure road Garki.",
+//     price: 250000,
+//     no_of_rooms: 100,
+//     room_number: " "
+//   },
 
-]
-localStorage.setItem("hostel_room", JSON.stringify(hostel));
-console.log(hostel);
+// ]
+// localStorage.setItem("hostel_room", JSON.stringify(hostel));
+// console.log(hostel);
 function submit(index) {
   let prodctarr = JSON.parse(localStorage.getItem("rooms"));
   let studentarr = {
@@ -129,6 +132,7 @@ function submit(index) {
 
 function show() {
   localStorage.setItem("hostel_room", JSON.stringify(hostel));
+  console.log(hostel);
   for (let index = 0; index < hostel.length; index++) {
     const element = hostel[index];
     display.innerHTML += `
@@ -221,15 +225,18 @@ function view(i) {
       const roomBtn = document.createElement("button");
       roomBtn.innerText = `Room ${j}`;
     
-      if (hostel[i].room_number === j) {
-        roomBtn.style.backgroundColor = "red";
-      }
-    
       roomBtn.addEventListener("click", () => {
         console.log(` ${j}`);
         hostel[i].room_number = j;
         console.log(prodctarr);
         roomBtn.style.backgroundColor = "red";
+        if (hostel[i].room_number === j) {
+          roomBtn.style.backgroundColor = "yellow";
+          hostel[i].no_of_rooms -=  1
+           console.log(hostel[i].room_number === j)
+        }else{
+          roomBtn.style.backgroundColor = "green"
+        }
     
         localStorage.setItem("rooms", JSON.stringify(prodctarr));
       });
@@ -266,10 +273,8 @@ function clickme() {
 
   if (prodctarr[index].room_number !== "" ) {
     alert("Successfully chose a room.");
-
-    const roomBtn = document.createElement("button");
-    roomBtn.style.backgroundColor = "red";
     document.getElementById("form").style.display = "block";
+    localStorage.setItem("rooms", JSON.stringify(prodctarr));
   } else {
     alert("Please go back and choose a room.");
     const roomBtn = document.createElement("button");
@@ -277,4 +282,11 @@ function clickme() {
     return;
   }
  
+}
+function back() {
+ document.getElementById("dropdown").style.display = "none"
+}
+function drop() {
+   document.getElementById("dropdown").style.display = "block" 
+   document.getElementById("dropdown").style.transition = "2s" 
 }

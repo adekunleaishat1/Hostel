@@ -1,4 +1,5 @@
 // let prodctarr = JSON.parse(localStorage.getItem("rooms"))
+document.getElementById("dropdown").style.display = "none"
 let studentarr =JSON.parse(localStorage.getItem("student"))
 console.log(studentarr);
 let receiptinfo =JSON.parse(localStorage.getItem("receipt"));
@@ -13,7 +14,7 @@ function payWithPaystack(e) {
   let handler = PaystackPop.setup({
     key: 'pk_test_a937907ad423ac18d530d435f6861d460d4ad42c', // Replace with your public key
     email: studentarr.email,
-    amount: studentarr.hostel.price + 00,
+    amount: studentarr.hostel.price * 100,
     ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
     // label: "Optional string that replaces customer email"
     onClose: function(){
@@ -42,6 +43,14 @@ function payWithPaystack(e) {
   });
 
   handler.openIframe();
+}
+
+function back() {
+ document.getElementById("dropdown").style.display = "none"
+}
+function drop() {
+   document.getElementById("dropdown").style.display = "block" 
+   document.getElementById("dropdown").style.transition = "2s" 
 }
 
 

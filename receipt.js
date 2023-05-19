@@ -13,7 +13,7 @@ let  receiptcontent = document.getElementById("receipt").innerHTML
    nam.innerHTML = receiptinfo.username
    price.innerHTML = "₦" + receiptinfo.hostelprice
    host.innerHTML = receiptinfo.hostel
-   room.innerHTML = "room no" + receiptinfo.room_no
+   room.innerHTML = "room-no" +"" +receiptinfo.room_no
    date.innerHTML = receiptinfo.date
 function print(){
     
@@ -25,7 +25,7 @@ function print(){
 
   printWindow.close();
 
-  window.location.href = "hostel.html"
+  window.location.href = "student.html"
 
 
 }

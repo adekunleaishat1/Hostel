@@ -24,7 +24,29 @@
               <button onclick="agent(event)">Contact Us</button>
               <button>Admin</button>
             </div>
+            <div class="bar2">
+              <button onclick="drop()" class="bar">
+               <i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
        </div>
+       <div id="dropdown">
+        <div class="drop1">
+            <button onclick="back()" class="icon">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="drop">
+                  <button onclick="home(event)">Home</button>
+                  <button>Lease a room</button>
+                  <button>occupant</button>
+                  <button onclick="agent(event)">Become a Host</button>
+                  <button>Admin</button>
+            </div>
+            <div class="imgna">
+               <img src="Black_Pink_Bold_Elegant_Monogram_Personal_Brand_Logo-removebg-preview.png" alt="">
+            </div>
+        </div>
+      </div>
        <div class="content">
          <div class="img-content">
             <img src="lovepik-real-estate-agent-sales-png-image_401510128_wh1200-transformed-removebg-preview.png" alt="">
@@ -61,13 +83,16 @@
           
             <label for="rental-price">Rental Price:</label>
             <input type="number" id="rentalprice" name="rental-price">
+
+            <label for="rooms">No of room:</label>
+            <input type="number" id="rooms" name="rooms">
           
             <label for="property-photos">Photos:</label>
             <input onchange="choosephoto()" type="file" id="propertyphotos" name="property-photos" accept="image/*" multiple>
             
             <div class="dii">
               <label for="property-photos">images:</label>
-              <input onchange="chooseimage()" type="file" id="propertyimage" name="property-images" accept="image/*" multiple>
+              <input onchange="chooseimage(event)" type="file" id="propertyimage" name="property-images" accept="image/*" multiple>
            </div>
           
           

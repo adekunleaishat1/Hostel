@@ -13,39 +13,84 @@
 </head>
 <body>
    <main>
-    <div id="receipt" class="receipt_cont">
-      <div class="pay-receipt">
-        <h1>Payment Receipt</h1>
+    <div class="topnav">
+      <div class="imgnav">
+        <img src="1-removebg-preview.png" alt="">
       </div>
-      <div class="contain">
-        <div class="img">
-          <div class="info">
-            <h1>Hostel:</h1>
-            <p id="hos"></p>
-          </div>
-          <div class="info">
-            <h1>Name:</h1>
-            <p id="nam"></p>
-          </div>
-          <div class="info">
-            <h1>room no:</h1>
-            <p id="room"></p>
-          </div>
-          <div class="info">
-            <h1>Price:</h1>
-            <p id="price"></p>
-          </div>
-          <div class="info">
-            <h1>Date:</h1>
-            <p id="date"></p>
-          </div>
-          <div class="inf">
-            <p>Thank you for Purchasing from Us</p>
-          </div>
-        </div>
+      <div class="butnav">
+        <button onclick="home(event)">Home</button>
+        <button>Profile</button>
+        <button>occupant</button>
+        <button onclick="agent(event)">Contact Us</button>
+        <button>Admin</button>
       </div>
    </div>
-   <button id="print" onclick="print()">Print Receipt</button>
+   <div class="contain2">
+      <div>
+        <div id="receipt" class="receipt_cont">
+          <div class="pay-receipt">
+            <h1>Payment Receipt</h1>
+          </div>
+          <div class="contain">
+            <div class="img">
+              <div class="info">
+                <h1>Hostel:</h1>
+                <p id="hos"></p>
+              </div>
+              <div class="info">
+                <h1>Name:</h1>
+                <p id="nam"></p>
+              </div>
+              <div class="info">
+                <h1>room no:</h1>
+                <p id="room"></p>
+              </div>
+              <div class="info">
+                <h1>Price:</h1>
+                <p id="price"></p>
+              </div>
+              <div class="info">
+                <h1>Date:</h1>
+                <p id="date"></p>
+              </div>
+              <div class="inf">
+                <p>Thank you for Purchasing from Us</p>
+              </div>
+            </div>
+          </div>
+       </div>
+       <button id="print" onclick="print()">Print Receipt</button>
+      </div>
+   </div>
+   <footer>
+    <div class="">
+      <div class="container">
+        <div class="cont1">
+          <h1>Company</h1>
+          <button>Term</button>
+          <button>Privacy</button>
+        </div>
+        <div class="cont1">
+          <h1>Quick Links</h1>
+          <button>Lease a Room</button>
+          <button>Become a Host</button>
+        </div>
+        <div class="cont1">
+          <h1>Resources</h1>
+          <button>FAQs</button>
+          <button>Help Center</button>
+        </div>
+        <div class="cont1">
+          <h1>Contacts</h1>
+          <button>hello@mmw</button>
+          <button>+2348108145267</button>
+        </div>
+      </div>
+      <div class="cont">
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
    </main>
 </body>
 </html>
